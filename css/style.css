@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "Outfit";
+    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nice-title {
+    font-family: "Young Serif", sans-serif;
+    font-size: 27px;
+    color: #854632;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 13px;
+}
+
+.nice-bullet {
+    margin-left: 35px;
+    position: relative;
+    color: #5f574e;
+    line-height: 1.8;
+}
+
+.nice-bullet:before {
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+hr {
+    border: 1px solid #e4ded8;
+    margin-top: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    box-sizing: border-box;
+    color: #5f574e;
+}
+
+.container {
+    background-color: #f3e5d8;
+    display: flex;
+    justify-content: center;
+}
+
+
+.recipe-page {
+    background-color: #FFF;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 650px;
+}
+
+@media(max-width: 767px) {
+    .recipe-page {
+        border-radius: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.image {}
+
+.image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media(max-width: 767px) {
+    .image img {
+        position: absolute;
+        border-radius: 0;
+        left: 0;
+        top: 0;
+    }
+}
+
+.description {
+    margin-top: 30px;
+}
+
+
+.description h1 {
+    margin-bottom: 25px;
+    font-family: "Young Serif", sans-serif;
+    color: #302d2c;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+@media(max-width: 767px) {
+    .description {
+        margin-top: 160px;
+    }
+
+    .description h1 {
+        font-size: 33px;
+    }
+}
+
+.description p {
+    margin-bottom: 30px;
+    line-height: 23px;
+}
+
+.prep-time {
+    background-color: #fff5fa;
+    padding: 25px 50px;
+    border-radius: 12px;
+}
+
+
+.prep-time ul {
+    list-style-type: none;
+}
+
+.prep-time ul:before {
+    content: attr(data-header);
+    font-size: 120%;
+    margin-left: -15px;
+    font-weight: bold;
+    color: #7b284f;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.prep-time ul .nice-bullet {
+    margin-left: 20px;
+}
+
+.prep-time ul .nice-bullet:before {
+    background-color: #7b284f;
+}
+
+.prep-time ul span {
+    font-weight: bold;
+}
+
+.ingredients {}
+
+.ingredients ul {
+    list-style-type: none;
+}
+
+.ingredients ul .nice-bullet::before {
+    background-color: #854632;
+}
+
+.instructions {}
+
+.instructions ol {
+    list-style-type: none;
+    counter-reset: my-counter;
+}
+
+.instructions ol li {
+    counter-increment: my-counter;
+    /* line-height: 1.8; */
+    margin-left: 35px;
+    position: relative;
+}
+
+.instructions ol li:before {
+    content: counter(my-counter) ".";
+    color: #854632;
+    font-weight: bold;
+    position: absolute;
+    left: -30px;
+}
+
+.instructions ol li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.instructions ol li span {
+    font-weight: bold;
+}
+
+.nutrition {}
+
+.nutrition p {
+    margin-bottom: 20px;
+}
+
+.nutrition ul {
+    list-style-type: none;
+}
+
+.nutrition ul li {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e4ded8;
+}
+
+.nutrition ul li span {
+    flex: 1;
+}
+
+.nutrition ul li span:last-child {
+    font-weight: bold;
+    color: #854632;
+}
