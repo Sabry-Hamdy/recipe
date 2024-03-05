@@ -223,3 +223,17 @@ body {
     font-weight: bold;
     color: #854632;
 }
+
+footer {
+    background-color: #302d2c;
+    color: #e4ded8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
